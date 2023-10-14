@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #F1F3F8;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  user-select: none;
+  &::-webkit-scrollbar{
+    width: 0;
+  }
+}
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+}
+button{
+  cursor: pointer;
+}
+main{
+  padding: 200px 0 50px 0;
+  width: 100%;
+  flex-grow: 1;
+  .news__section{
+    width: 100%;
+    // max-width: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 44px;
+    .section__name{
+      width: 100%;
+      max-width: 593px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 36px;
+      // align-items: center;
+      .number__name{
+        width: 100%;
+        max-width: 127px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .number{
+          width: 32px;
+          height: 32px;
+          background: black;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          font-size: 14px;
+          font-weight: 400;
+          font-family: "Gilroy", sans-serif;
+          color: white;
+        }
+        .name{
+          width: 83px;
+          padding: 8px 24px;
+          border: 1px solid black;
+          border-radius: 36px;
+          font-family: "Gilroy", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+      }
+      h4{
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: -0.24px;
+        text-transform: uppercase;
+        font-family: "Red Hat Display", sans-serif;
+      }
+    }
+    .slides{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      .slide__cards{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        .slide{
+          width: 100%;
+          max-width: 346px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 24px;
+          .news__info{
+            width: 100%;
+            // overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-family: "Gilroy", sans-serif;
+            p{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 20px;
+              font-weight: 500;
+            }
+            span{
+              font-size: 14px;
+              font-weight: 400;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      .buttons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .view__all{
+          width: 100%;
+          max-width: 180px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 19px;
+          border: 1px solid black;
+          border-radius: 39px;
+          background: transparent;
+          span{
+            font-family: "Gilroy", sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 500;
+          }
+          &:hover{
+            background: black;
+            color: white;
+            svg{
+              path{
+                fill: white;
+              }
+            }
+          }
+        }
+        .prev__next{
+          width: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          button{
+            width: 48px;
+            height: 48px;
+            border: 1px solid black;
+            border-radius: 100%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+              background: black;
+              svg{
+                path{
+                  fill: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
