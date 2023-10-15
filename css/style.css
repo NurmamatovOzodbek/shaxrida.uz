@@ -182,6 +182,10 @@ header .banner {
 header .banner .region {
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+  cursor: pointer;
 }
 header .banner h1 {
   padding-top: 48px;
