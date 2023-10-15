@@ -7,6 +7,8 @@
 }
 
 body{
+  width: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background: #F1F3F8;
@@ -20,6 +22,7 @@ body{
 }
 .container{
   max-width: 1350px;
+  // height: 2000px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -103,184 +106,179 @@ button{
 }
 header{
   nav{
-    .container{
-      max-width: 1320px;
-      margin: 0 auto;
-      .navigation{
-        // position: sticky;
-        // top: 52px;
-        padding: 26px 0px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    .navigation{
+      padding: 26px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .info{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        .info{
+        ul{
           display: flex;
-          align-items: center;
-          ul{
-            display: flex;
-            li{
+          li{
+            cursor: pointer;
+            margin-left: 12px;
+            padding: 16px 28px;
+            list-style-type: none;
+            border: 1px solid rgba(0, 0, 0, 0);
+            &:active{
+              border-radius: 32px;
+              border: 1px solid black;
+            }
+            a{
+              font-family: "Gilroy", sans-serif;
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: 400;
+              color: black;
+            }
+          }
+        }
+        .add_news{
+          margin-left: 12px;
+          a{
+            text-decoration: none;
+            button{
               cursor: pointer;
-              margin-left: 12px;
+              display: flex;
+              align-items: center;
+              background-color: black;
               padding: 16px 28px;
-              list-style-type: none;
-              border: 1px solid rgba(0, 0, 0, 0);
-              &:active{
-                border-radius: 32px;
-                border: 1px solid black;
-              }
-              a{
-                font-family: "Gilroy", sans-serif;
-                text-decoration: none;
-                font-size: 14px;
-                font-weight: 400;
-                color: black;
+              color: white;
+              border: none;
+              border-radius: 36px;
+              font-size: 14px;
+              font-weight: 400;
+              img{
+                margin-left: 16px;
               }
             }
           }
-          .add_news{
-            margin-left: 12px;
+
+        }
+        .translate{
+          margin-left: 40px;
+          border-radius: 36px;
+          display: flex;
+          border: 1px solid black;
+          padding: 7px ;
+
+          a{
+            .language{
+              cursor: pointer;
+              font-family: "Gilroy", sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              padding: 9px 16px;
+              border-radius: 36px;
+              background-color: white;
+              border: none;
+              }
+            }
+
+          }
+        }
+
+      }
+    }
+    .banner{
+      padding-top: 196px;
+      .region{
+        font-family: "Gilroy", sans-serif;
+        font-weight:600 ;
+      }
+      h1{
+        padding-top: 48px;
+        width: 1092px;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 96px;
+        line-height: 115px;
+        letter-spacing: 2%;
+        font-weight: 500;
+      }
+      .information{
+        margin-top: 94px;
+        display: flex;
+        justify-content: end;
+        .title{
+          max-width: 537px;
+          font-family: "Gilroy", sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: 0.2px;
+        }
+        .search{
+          .search_blog{
+            display: flex;
+            align-items: center;
+            .search_input{
+              padding: 0px 24px;
+              border-radius: 32px;
+              width: 408px;
+              display: flex;
+              align-items: center;
+              border: 1px solid black;
+              align-items: center;
+              column-gap: 10px;
+              input{
+                flex-grow: 1;
+                // cursor: pointer;
+                width: 100%;
+                padding: 13px 0px;
+                outline: none;
+                border: none;
+                // margin-left: 10px;
+                background: transparent;
+              }
+            }
             a{
-              text-decoration: none;
+              margin-left: 16px;
+              button{
+                padding: 14px 24px;
+                border-radius: 32px;
+                border: none;
+                background-color: black;
+                color: white;
+                font-family: "Gilroy", sans-serif;
+                font-size: 18px;
+                cursor: pointer;
+                font-weight: 500;
+              }
+            }
+          }
+          .search_content{
+            display: flex;
+            a{
               button{
                 cursor: pointer;
-                display: flex;
-                align-items: center;
-                background-color: black;
-                padding: 16px 28px;
-                color: white;
-                border: none;
-                border-radius: 36px;
-                font-size: 14px;
-                font-weight: 400;
-                img{
-                  margin-left: 16px;
-                }
-              }
-            }
-
-          }
-          .translate{
-            margin-left: 40px;
-            border-radius: 36px;
-            display: flex;
-            border: 1px solid black;
-            padding: 7px ;
-
-            a{
-              .language{
-                cursor: pointer;
+                margin-top: 16px;
+                margin-right: 16px;
                 font-family: "Gilroy", sans-serif;
+                color: silver;
+                padding: 6px 18px;
+                border-radius: 33px;
+                border: 1px solid  #BFBFBF;
+                background-color: white;
                 font-size: 14px;
                 font-weight: 400;
-                padding: 9px 16px;
-                border-radius: 36px;
-                background-color: transparent;
-                border: none;
-                // &:active{
-                  //   background-color: black;
-                  //   color: white;
-                  // }
-                }
               }
-
-            }
-          }
-
-        }
-        .banner{
-          margin-top: 96px;
-          .region{
-            font-family: "Gilroy", sans-serif;
-            font-weight:600 ;
-          }
-          h1{
-            margin-top: 48px;
-            width: 1092px;
-            font-family: 'Red Hat Display', sans-serif;
-            font-size: 96px;
-            line-height: 115px;
-            letter-spacing: 2%;
-            font-weight: 500;
-          }
-          .information{
-            margin-top: 94px;
-            display: flex;
-            justify-content: end;
-            .title{
-              max-width: 537px;
-              font-family: "Gilroy", sans-serif;
-              font-size: 16px;
-              font-weight: 500;
-              font-weight: 500;
-              line-height: 24px;
-              letter-spacing: 0.2px;
-            }
-            .search{
-              .search_blog{
-                display: flex;
-                align-items: center;
-                .search_input{
-                  padding: 0px 24px;
-                  border-radius: 32px;
-                  width: 408px;
-                  display: flex;
-                  align-items: center;
-                  border: 1px solid black;
-                  align-items: center;
-                  input{
-                    flex-grow: 1;
-                    // cursor: pointer;
-                    padding: 13px 0px;
-                    outline: none;
-                    border: none;
-                    margin-left: 10px;
-                    background-color: transparent;
-                  }
-                }
-                a{
-                  margin-left: 16px;
-                  button{
-                    padding: 14px 24px;
-                    border-radius: 32px;
-                    border: none;
-                    background-color: black;
-                    color: white;
-                    font-family: "Gilroy", sans-serif;
-                    font-size: 18px;
-                    cursor: pointer;
-                    font-weight: 500;
-                  }
-                }
-              }
-              .search_content{
-                display: flex;
-                a{
-                  button{
-                    cursor: pointer;
-                    margin-top: 16px;
-                    margin-right: 16px;
-                    font-family: "Gilroy", sans-serif;
-                    color: silver;
-                    padding: 6px 18px;
-                    border-radius: 33px;
-                    border: 1px solid  #BFBFBF;
-                    background-color: transparent;
-                    font-size: 14px;
-                    font-weight: 400;
-                  }
-                }
-              }
-            }
-          }
-          .banner_img{
-            margin-top: 65px;
-            img{
-              cursor: pointer;
-              border-radius: 29px;
             }
           }
         }
-
+      }
+      .banner_img{
+        margin-top: 65px;
+        img{
+          cursor: pointer;
+          border-radius: 29px;
+        }
       }
     }
   }
@@ -382,10 +380,10 @@ main{
               text-transform: capitalize;
             }
           }
-          // &.active{
-          //   // overflow-x: hidden;
-          //   transform: translateX(-82px);
-          // }
+          &.active{
+            // overflow-x: hidden;
+            transform: translateX(-82px);
+          }
         }
       }
       .buttons{
@@ -440,6 +438,7 @@ main{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        column-gap: 10px;
       }
       article{
         width: 100%;
